@@ -27,27 +27,77 @@
   height: 650px;
   width: 600px;
   overflow: hidden;
-  margin: auto;
-  background-color: #FFDF00;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
+
+
 }
 
 h5{
-  background-color: #ff33cc;
 
+  background-color: black;
 }
 
 
+.navbar .navbar-nav{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.navbar a{
+  font-size: 25;
+  font-family: Trebuchet MS, sans-serif;
+  font-weight: bold;
 
 
+
+
+}
+.navbar .nav-item.nav-link.active {
+  margin-right: 80px;
+
+}
+.navbar .nav-item2.nav-link {
+  margin-left: 80px;
+
+}
+.navbar .nav-item3.nav-link {
+  margin-right: 110px;
+
+
+}
+.navbar .nav-item4.nav-link {
+  margin-left: 110px;
+
+
+}
 
   </style>
 
   </head>
   <body>
 
-  <h1> Sushma's Eggless Bakes</h1>
+  <h1> Sushma's Bakery</h1>
   <h2> Located in the Liverpool, UK Area </h2>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item3 nav-link" href="#">Contact</a>
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+
+      <a class="nav-item nav-link" href="#">About</a>
+      <a class="nav-item2 nav-link" href="#">Gallery</a>
+      <a class="nav-item4 nav-link" href='#'>Order</a>
+
+    </div>
+  </div>
+</nav>
 
   <div id="carouselbakes" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -57,23 +107,23 @@ h5{
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="chocolate_ribbon_cake.jpg" class="d-block w-100" alt="" height = "650" width = "600">
+      <img src="flower_bunch.jpg" class="d-block w-100" alt="" height = "650" width = "600">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Chocolate Ribbon Cake</h5>
+        <h5>View Sushma's Cupcakes in Gallery</h5>
         <p></p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="evan.jpg" class="d-block w-100" alt="" height ="650"width ="600">
+      <img src="chocolate_ribbon_cake.jpg" class="d-block w-100" alt="" height ="650"width ="600">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Fruity Birthday Cake</h5>
+        <h5>View Sushma's Cakes in Gallery</h5>
         <p></p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="creamy_choco_cake.jpg" class="d-block w-100" alt="" height= "650" width = "500" >
+      <img src="evan.jpg" class="d-block w-100" alt="" height= "650" width = "500" >
       <div class="carousel-caption d-none d-md-block">
-        <h5>Creamy & Dreamy Choco Cake</h5>
+        <h5>View Custom Cakes in Gallery</h5>
 
       </div>
     </div>
