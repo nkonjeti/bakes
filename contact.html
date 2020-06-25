@@ -126,16 +126,16 @@
   </div>
 </nav>
 
-<form name = 'submit-to-google-sheet' >
+<form  id = "myForm" action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScyc-modXqNj9a-SuIubFOFVoEbqfAroG2DdOCVIlclp0inYw/formResponse" method: "post" target = "hidden_iframe">
   <div>
     <h1 style = "text-align: center; font-size: 400%"> Contact Us </h1>
     <div style = "text-align: center;"> <h2> Let us know you are interested! </h2> </div>
   </div>
   <div>
-    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "entername" name="form_field_1" placeholder="Enter your name here" style = " font-size: 20px" required/>
-      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "enteremail" name="form_field_2" placeholder="Enter your email here" style = " font-size: 20px" required/>
-      <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type ="text" id ="entermessage" name "form_field_3" placeholder = "Enter your message here" style = "font-size: 20px" required />
-    <input type ='submit' style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%" type="submit" id="js_send" value="Submit" />
+    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" placeholder="Enter your name here" style = " font-size: 20px" required/>
+      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" jsname="YPqjbf" placeholder="Enter your email here" class="quantumWizTextinputPaperinputInput exportInput"style = " font-size: 20px" required/>
+      <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type ="text" jsname="YPqjbf" class="quantumWizTextinputPaperinputInput exportInput" placeholder = "Enter your message here" style = "font-size: 20px" required />
+    <input type ='submit' action = "resetform()" style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%"  value="Submit" />
 
   </div>
 
@@ -146,25 +146,11 @@
 
 
 
-<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
-<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
-<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
 
 <script>
- const scriptURL = 'https://script.google.com/macros/s/AKfycbxr-8PK-ZB3IpK3TfQYA5Si4yPkt71cfFSsBBW_obh03iTpsWs/exec';
-
- const form = document.forms['submit-to-google-sheet'];
- 
- form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
-
-</script>
-
-
+resetform() {
+  document.getElementById("myForm").reset();
+}
 </script>
 <div class ="copyright"> <a> Copyright &copy Sushma's Eggless Bakes 2020 <a> </div>
     </body>
