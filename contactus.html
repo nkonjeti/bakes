@@ -97,7 +97,6 @@
 }
 
 
-
   </style>
 
   </head>
@@ -116,9 +115,9 @@
 
     <div class="navbar-nav">
       <img class = logo src= "logo.png" height = "200" width = "300">
-      <a class="nav-item3 nav-link" href="contactus.html">CONTACT</a>
-      <a class="nav-item nav-link active" href="site.html">HOME <span class="sr-only">(current)</span></a>
+      <a class="nav-item3 nav-link" href="contactus.html"><b>CONTACT <span class="sr-only">(current)</span></b></a>
 
+      <a class="nav-item nav-link active" href="site.html">HOME</a>
       <a class="nav-item nav-link" href="about.html">ABOUT</a>
       <a class="nav-item2 nav-link" href="gallery.html">GALLERY</a>
 
@@ -127,28 +126,25 @@
   </div>
 </nav>
 
-<form id="javascript_form">
+<form action="https://formspree.io/sushmaegglessbakes@gmail.com" method="POST">
   <div>
     <h1 style = "text-align: center; font-size: 400%"> Contact Us </h1>
     <div style = "text-align: center;"> <h2> Let us know you are interested! </h2> </div>
   </div>
   <div>
     <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "entername" name="name" placeholder="Enter your name here" style = " font-size: 20px"/>
-    <input style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%" type="submit" id="js_send" value="Start Chat" onclick="startchat()" />
+      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "enteremail" name="email" placeholder="Enter your email here" style = " font-size: 20px"/>
+      <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type ="text" id ="entermessage" name "message" placeholder = "Enter your message here" style = "font-size: 20px"/>
+    <input style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%" type="submit" id="js_send" value="Submit" onclick="startchat()" />
 
   </div>
 
-  <div> <p id= "chatbot1" style = "margin-left:35%; margin-top: 2%; width: 30%; height: 10%">Start chat to ask questions! </p> </div>
+  <div> <p id= "space" style = "margin-left:35%; margin-top: 2%; width: 30%; height: 10%"> </p> </div>
 
     <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
 </form>
 
 <script>
-form_id_js = "javascript_form"
-var name = document.getElementById('entername').innerHTML
-function startchat() {
-   return document.getElementById('chatbot1').innerHTML = "hello";
-}
 
 
 
@@ -157,7 +153,7 @@ function startchat() {
   //  var form_id_js = "javascript_form";
 
 //    var data_js = {
-        "access_token": "rp51kghesdvglwfog8quc6lz"
+      //  "access_token": "rp51kghesdvglwfog8quc6lz"
 //    };
 
 
