@@ -126,16 +126,16 @@
   </div>
 </nav>
 
-<form data-netlify="true" method="POST">
+<form name = 'submit-to-google-sheet' >
   <div>
     <h1 style = "text-align: center; font-size: 400%"> Contact Us </h1>
     <div style = "text-align: center;"> <h2> Let us know you are interested! </h2> </div>
   </div>
   <div>
-    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "entername" name="name" placeholder="Enter your name here" style = " font-size: 20px"/>
-      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "enteremail" name="email" placeholder="Enter your email here" style = " font-size: 20px"/>
-      <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type ="text" id ="entermessage" name "message" placeholder = "Enter your message here" style = "font-size: 20px"/>
-    <input style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%" type="submit" id="js_send" value="Submit" onclick="startchat()" />
+    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "entername" name="form_field_1" placeholder="Enter your name here" style = " font-size: 20px" required/>
+      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" id = "enteremail" name="form_field_2" placeholder="Enter your email here" style = " font-size: 20px" required/>
+      <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type ="text" id ="entermessage" name "form_field_3" placeholder = "Enter your message here" style = "font-size: 20px" required />
+    <input type ='submit' style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%" type="submit" id="js_send" value="Submit" />
 
   </div>
 
@@ -144,27 +144,25 @@
     <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
 </form>
 
+
+
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
 <script>
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbxr-8PK-ZB3IpK3TfQYA5Si4yPkt71cfFSsBBW_obh03iTpsWs/exec';
 
+ const form = document.forms['submit-to-google-sheet'];
+ 
+ form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 
-
-
-    //update this with your js_form selector
-  //  var form_id_js = "javascript_form";
-
-//    var data_js = {
-      //  "access_token": "rp51kghesdvglwfog8quc6lz"
-//    };
-
-
-//    var sendButton = document.getElementById("js_send");
-
-
-//        sendButton.value='Sending…';
-//        sendButton.disabled=true;
-
-
-
+</script>
 
 
 </script>
