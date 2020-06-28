@@ -1,6 +1,7 @@
 <!<!DOCTYPE html>
 <html>
 <head>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <title> Sushma's Eggless Bakes</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -126,7 +127,7 @@
   </div>
 </nav>
 
-<form  id = "myForm" action = "https://docs.google.com/forms/u/0/d/e/1FAIpQLScyc-modXqNj9a-SuIubFOFVoEbqfAroG2DdOCVIlclp0inYw/formResponse" method: "post" target = "hidden_iframe">
+<form  id = "myForm"  method: "post" >
   <div>
     <h1 style = "text-align: center; font-size: 400%"> Contact Us </h1>
     <div style = "text-align: center;"> <h2> Let us know you are interested! </h2> </div>
@@ -135,7 +136,7 @@
     <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i1" aria-describedby="i2 i3" dir="auto" data-initial-dir="auto" data-initial-value=""placeholder="Enter your name here" style = " font-size: 20px" required/>
      <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i5" aria-describedby="i6 i7" dir="auto" data-initial-dir="auto" data-initial-value="">
 <input style = "margin-left: 35%; margin-top:2%; width: 30%;" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i9" aria-describedby="i10 i11" dir="auto" data-initial-dir="auto" data-initial-value="">
-    <input type ='submit' action = "resetform()" style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%"  value="Submit" />
+    <input type ='submit' style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%"  value="Submit" />
 
   </div>
 
@@ -146,12 +147,18 @@
 
 
 
-
 <script>
-resetform() {
-  document.getElementById("myForm").reset();
-}
+Email.send({
+    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    To : 'sushmaegglessbakes@gmail.com',
+    From : "sushmaegglessbakes@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
 </script>
+
 <div class ="copyright"> <a> Copyright &copy Sushma's Eggless Bakes 2020 <a> </div>
     </body>
     </html>
