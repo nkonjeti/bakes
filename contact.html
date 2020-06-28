@@ -1,7 +1,7 @@
 <!<!DOCTYPE html>
 <html>
 <head>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
   <title> Sushma's Eggless Bakes</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -133,10 +133,10 @@
     <div style = "text-align: center;"> <h2> Let us know you are interested! </h2> </div>
   </div>
   <div>
-    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i1" aria-describedby="i2 i3" dir="auto" data-initial-dir="auto" data-initial-value=""placeholder="Enter your name here" style = " font-size: 20px" required/>
-     <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i5" aria-describedby="i6 i7" dir="auto" data-initial-dir="auto" data-initial-value="">
-<input style = "margin-left: 35%; margin-top:2%; width: 30%;" type="text" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-labelledby="i9" aria-describedby="i10 i11" dir="auto" data-initial-dir="auto" data-initial-value="">
-    <input type ='submit' style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%"  value="Submit" />
+    <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" placeholder="Enter your name here" style = " font-size: 20px" required/>
+     <input style = "margin-left: 35%; margin-top: 2%; width: 30%" type="text" placeholder = "Enter your email here" required>
+<input style = "margin-left: 35%; margin-top:2%; width: 30%;" type="text" placeholder = "Enter your message here" required>
+    <input type ='submit' style = "background-color: green; margin-left: 40%; margin-top: 2%; width: 20%; height: 10%;  margin-top: 2%"  value="Submit" onclick = "sendemail()"/>
 
   </div>
 
@@ -145,11 +145,13 @@
     <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
 </form>
 
-
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
 
 <script>
+function sendemail(){
 Email.send({
-    SecureToken : "b3b960d8-2cda-4d42-82d8-a5949db16d7e",
+    SecureToken : "41761e3e-4d16-44ba-b148-c8b98e67c167",
     To : 'sushmaegglessbakes@gmail.com',
     From : "sushmaegglessbakes@gmail.com",
     Subject : "This is the subject",
@@ -157,6 +159,7 @@ Email.send({
 }).then(
   message => alert(message)
 );
+}
 </script>
 
 <div class ="copyright"> <a> Copyright &copy Sushma's Eggless Bakes 2020 <a> </div>
