@@ -1,0 +1,202 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+
+  <title> Sushma's Eggless Bakes</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+
+
+  h1{
+    color: white;
+    background-color: #c90a41;
+
+    text-align: center;
+    margin: 5px;
+    font-size: 80;
+    font-family: URW Chancery L, cursive;
+  }
+  h2{
+    color: white;
+    background-color: black;
+    text-align: center;
+    margin: 5px;
+    font-size: 30;
+    font-family: Andale Mono, monospace;
+    font-weight: bold;
+
+  }
+
+
+h5{
+
+  background-color: black;
+  font-size: 30px;
+  font-family: cursive;
+}
+
+
+.navbar .navbar-nav{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.navbar a{
+  font-size: 25;
+  font-family: brandon grotesque;
+  font-weight: bold;
+
+
+
+
+}
+.navbar a:hover{
+  border-style: dashed;
+
+}
+.navbar .nav-item.nav-link.active {
+  margin-right: 80px;
+
+}
+.navbar .nav-item2.nav-link {
+  margin-left: 80px;
+
+}
+.navbar .nav-item3.nav-link {
+  margin-right: 110px;
+
+
+}
+.navbar .nav-item4.nav-link {
+  margin-left: 110px;
+
+
+}
+.textbox {
+
+  font-family: cursive;
+  color: black;
+
+
+}
+body{
+  background-image: url("fruity.jpg");
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.aboutsushma {
+
+  color: white;
+  text-align: center;
+  margin: 200;
+  font-size: 100;
+font-family: Impact, fantasy;
+
+  </style>
+
+  </head>
+  <body>
+
+
+ <h1> Sushma's Eggless Bakes</h1>
+  <h2> LOCATED IN THE LIVERPOOL, UK AREA </h2>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item3 nav-link" href="#">CONTACT</a>
+      <a class="nav-item nav-link active" href="site.html">HOME <span class="sr-only">(current)</span></a>
+
+      <a class="nav-item nav-link" href="about.html">ABOUT</a>
+      <a class="nav-item2 nav-link" href="gallery.html">GALLERY</a>
+      <a class="nav-item4 nav-link" href='#'>ORDER</a>
+
+
+    </div>
+  </div>
+</nav>
+<div class = "aboutsushma" <a> |ABOUT SUSHMA| </a>
+<form id="javascript_form">
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="text" placeholder="Message"></textarea>
+    <input type="submit" id="js_send" value="Send" />
+
+    <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+    <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+</form>
+
+<script>
+
+    //update this with your js_form selector
+    var form_id_js = "javascript_form";
+
+    var data_js = {
+        "access_token": "rp51kghesdvglwfog8quc6lz"
+    };
+
+    function js_onSuccess() {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
+    }
+
+    function js_onError(error) {
+        // remove this to avoid redirect
+        window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
+    }
+
+    var sendButton = document.getElementById("js_send");
+
+    function js_send() {
+        sendButton.value='Sending…';
+        sendButton.disabled=true;
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == 200) {
+                js_onSuccess();
+            } else
+            if(request.readyState == 4) {
+                js_onError(request.response);
+            }
+        };
+
+        var subject = document.querySelector("#" + form_id_js + " [name='subject']").value;
+        var message = document.querySelector("#" + form_id_js + " [name='text']").value;
+        data_js['subject'] = subject;
+        data_js['text'] = message;
+        var params = toParams(data_js);
+
+        request.open("POST", "https://postmail.invotes.com/send", true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        request.send(params);
+
+        return false;
+    }
+
+    sendButton.onclick = js_send;
+
+    function toParams(data_js) {
+        var form_data = [];
+        for ( var key in data_js ) {
+            form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
+        }
+
+        return form_data.join("&");
+    }
+
+    var js_form = document.getElementById(form_id_js);
+    js_form.addEventListener("submit", function (e) {
+        e.preventDefault();
+    });
+</script>
+</body>
+
+
+
+    </html>
