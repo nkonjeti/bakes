@@ -22,16 +22,7 @@
 
 
   }
- @font-face {
-   font-family: "playlist-script";
-   src:url("p1.jpg");
-   src:url("p2".jpg);
-   src:url("p3.jpg");
-   src:url("Playlist Caps.otf");
-   src:url("Playlist Ornament.otf");
-   src:url("Playlist Script.otf");
-   src:url("readme.txt");
- }
+
 
   .carousel {
 
@@ -113,6 +104,33 @@
 
 
 }
+.shakeimage {
+  animation-name: slidein;
+  animation-duration: 1s;
+}
+
+
+
+@keyframes slidein {
+from {
+  margin-left: 10%;
+
+}
+to {
+  margin-left: 0%;
+
+}
+}
+@keyframes pickup {
+  from {
+    margin-top: 10%
+  }
+  to {
+    margin-top: 0%;
+  }
+
+}
+
 
 .copyright {
   font-size: 20px;
@@ -125,6 +143,7 @@
   padding: 5%;
 
 }
+
 
 
 
@@ -158,9 +177,9 @@
 </nav>
 
   <h1 style = "text-align: center; color: #e663a6; font-family: 'Satisfy';"> Contact Us </h1>
-  <h2 style = "color:#e663a6; text-align: center; font-family: 'Satisfy';padding: 5%"> Our team will get back to you in 2-4 hours </h2>
-  <img src = "icepops.png" style = "height: 50%;position: absolute; top:50%;left: 10%;transform:translate(-10%, -50%);">
-  <img src = "icepops.png" style = "height: 50%;position: absolute;top:50%;left: 90%;transform:translate(-90%, -50%);">
+  <h2 style = "color:#e663a6; text-align: center; font-family: 'Satisfy';padding: 5%"> Our team will get back to you ASAP! </h2>
+  <img class ="shakeimage" src = "icepops.png" style = " height: 50%;position: absolute; top:50%;left: 10%;transform:translate(-10%, -50%);">
+  <img class ="shakeimage"src = "icepops.png" style = "height: 50%;position: absolute;top:50%;left: 90%;transform:translate(-90%, -50%);">
 
 
 <div>  <a class = "contactus" href="https://mail.google.com/mail/?view=cm&fs=1&to=sushmaegglessbakes@gmail.com&su=SUBJECT&body=BODY" >Click Here to Email Us</a> </div>
