@@ -22,15 +22,65 @@
 
 
   }
-  .slide {
-    animation-name: slidein;
-    animation-duration: 2s;
 
-  }
   .imageslide {
     animation-name: slideout;
     animation-duration: 2s;
   }
+  .slide:hover {
+    animation-name: slidein;
+    animation-duration: 2s;
+  }
+  .textslide:hover {
+    animation-name: slidein;
+    animation-duration: 2s;
+  }
+#popshake:hover {
+  animation-name:slideout;
+  animation-duration: 3s;
+
+}
+
+.logo:hover {
+  animation-name:slideout;
+  animation-duration: 2s;
+}
+  .pops1{
+    animation-name: falling;
+    animation-duration: 7s;
+
+  }
+  .pops2{
+    animation-name: falling;
+    animation-duration: 6s;
+
+  }
+  .pops3{
+    animation-name: falling;
+    animation-duration: 5s;
+
+  }
+  .pops4{
+    animation-name: falling;
+    animation-duration: 4s;
+
+  }
+  .pops5{
+    animation-name: falling;
+    animation-duration: 3s;
+
+  }
+  .pops6{
+    animation-name: falling;
+    animation-duration: 2s;
+
+  }
+  .pops7{
+    animation-name: falling;
+    animation-duration: 1s;
+
+  }
+
   @keyframes slidein {
   from {
     margin-left: 10%;
@@ -55,7 +105,26 @@
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
- 
+
+@keyframes falling {
+  from {
+   height: 20%;
+
+
+
+
+  }
+  to {
+    height: 20%;
+
+    transform: translate(0%, 800%);
+
+
+  }
+
+}
+
+
 
   .carousel {
 
@@ -140,7 +209,17 @@
   </style>
 
   </head>
+
   <body style = "background-color: #fccfe2;">
+    <img class= "pops" style = "height: 0%;" src= "onepop.png">
+      <img id ="popshake" class = "pops1" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops2" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops3" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops4" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops5" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops6" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id ="popshake"class = "pops7" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops7" style = "height: 20%; margin-right: 1%" src= "onepop.png">
 
 
 
@@ -166,8 +245,10 @@
   </div>
 </nav>
 
-  <div> <img class="imageslide" src="flower_bunch.png" style = " margin-left: 5%; height: 70%; width: 40%; padding: 5%;">
-    <a class = "slide" style ="padding: 5%; background-color: #e663a6; text-align: center; color: white; font-family: 'Satisfy', cursive; font-size: 200%; position: relative; "> Eggless Bakes For Every Ocassion! &#9829 </a>
+
+
+  <div> <img id = "pinkshake" class="imageslide" src="pinkcake.png" style = " margin-left: 5%; height: 70%; width: 40%; padding: 5%;">
+    <a class = "textslide" style ="padding: 5%; background-color: #e663a6; text-align: center; color: white; font-family: 'Satisfy', cursive; font-size: 200%; position: relative; "> Eggless Bakes For Every Ocassion! &#9829 </a>
 
 
 
