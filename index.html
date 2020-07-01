@@ -9,18 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <style>
-  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
-  html {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    width: 100vh;
-    height: 100vw;
-    overflow-x: hidden;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-}
+
 
 
   .logo{
@@ -47,42 +36,6 @@
   animation-name:slideout;
   animation-duration: 2s;
 }
-  .pops1{
-    animation-name: falling;
-    animation-duration: 7s;
-
-  }
-  .pops2{
-    animation-name: falling;
-    animation-duration: 6s;
-
-  }
-  .pops3{
-    animation-name: falling;
-    animation-duration: 5s;
-
-  }
-
-  .pops4{
-    animation-name: falling;
-    animation-duration: 4s;
-
-  }
-  .pops5{
-    animation-name: falling;
-    animation-duration: 3s;
-
-  }
-  .pops6{
-    animation-name: falling;
-    animation-duration: 2s;
-
-  }
-  .pops7{
-    animation-name: falling;
-    animation-duration: 1s;
-
-  }
 
   @keyframes slidein {
   from {
@@ -108,6 +61,119 @@
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+@media only screen and (max-width: 600px) {
+  .pops1{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 7s;
+
+
+  }
+  .pops2{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 6s;
+
+  }
+  .pops3{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 5s;
+
+  }
+
+  .pops4{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 4s;
+
+  }
+  .pops5{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 3s;
+
+  }
+  .pops6{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 2s;
+
+  }
+  .pops7{
+    height: 10%;
+    animation-name: falling;
+    animation-duration: 1s;
+
+  }
+
+
+  @keyframes falling {
+    from {
+     height: 10%;
+
+
+
+
+    }
+    to {
+      height: 10%;
+
+      transform: translate(0%, 800%);
+
+
+    }
+
+  }
+
+
+}
+@media only screen and (min-width:600px){
+  .pops1{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 7s;
+
+
+  }
+  .pops2{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 6s;
+
+  }
+  .pops3{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 5s;
+
+  }
+
+  .pops4{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 4s;
+
+  }
+  .pops5{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 3s;
+
+  }
+  .pops6{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 2s;
+
+  }
+  .pops7{
+    height: 20%;
+    animation-name: falling;
+    animation-duration: 1s;
+
+  }
+
 
 @keyframes falling {
   from {
@@ -127,7 +193,7 @@
 
 }
 
-
+}
 
 
 
@@ -197,14 +263,14 @@
 
   <body style = "background-color: #fccfe2;">
     <img class= "pops" style = "height: 0%;" src= "onepop.png">
-      <img id ="popshake" class = "pops1" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops2" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops3" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops4" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops5" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops6" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id ="popshake"class = "pops7" style = "height: 20%; margin-right: 1%" src= "onepop.png">
-      <img id = "popshake"class = "pops7" style = "height: 20%; margin-right: 1%" src= "onepop.png">
+      <img id ="popshake" class = "pops1" style = " margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops2" style = " margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops3" style = "margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops4" style = " margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops5" style = " margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops6" style = "margin-right: 1%" src= "onepop.png">
+      <img id ="popshake"class = "pops7" style = " margin-right: 1%" src= "onepop.png">
+      <img id = "popshake"class = "pops7" style = " margin-right: 1%" src= "onepop.png">
 
 
 
@@ -232,19 +298,19 @@
 
 
 
-  <div> <img id = "pinkshake" class="imageslide" src="pinkcake.png" style = " margin-left: 5%; height: 70%; width: 40%; padding: 5%;">
+  <div> <img id = "pinkshake" class="imageslide" src="pinkcake.png" style = " margin-left: 5%; height: 70%;  padding: 5%;">
   <a class = "textslide" style ="padding: 5%; background-color: #e663a6; text-align: center; color: white; font-family: 'Satisfy', cursive; font-size: 200%; position: relative"> Eggless Bakes For Every Ocassion! &#9829 </a>
 <div>
 
 
 <div>
       <img src="freepink.jpg" alt="" height = "80%" width = "80%" style = "margin-left: 13%;" >
-     <a class = "readabout" style = " margin-left: -60%; font-weight: 200%; text-align: center; font-size: 50; color: white; background-color: #f249ae; font-family: 'Satisfy', cursive; padding:5% ; "> &#9733 Read About Sushma's Bakery </a>
+     <a class = "readabout" style = " margin-left: -60%; font-weight: 200%; text-align: center; font-size: 200%; color: white; background-color: #f249ae; font-family: 'Satisfy', cursive; padding:5% ; "> &#9733 Located in the Liverpool, UK Area </a>
 
-    <img src = "prettycake.png" style =" margin-top: -60%;margin-left: 8%;" height: "50%" width = "30%" >
+    <img src = "prettycake.png" style =" margin-top: 0%; margin-left: -5%; height: 30%" >
 
 
-        <input type="button"  onclick="location.href='about.html';" value="Go to About" style = "color: white; background-color: pink;font-size: 300%;font-family: 'Satisfy';margin-top: -30%;padding: 5%; margin-bottom: 10%;margin-right: 5%;" />
+        <input type="button"  onclick="location.href='about.html';" value="Go to About" style = "color: white; background-color: pink;font-size: 300%;font-family: 'Satisfy';margin-top: -15%;padding: 2%; margin-bottom: 10%;margin-left:40%;" />
 
 </div>
 
