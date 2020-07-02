@@ -41,6 +41,10 @@
   animation-name: slideout;
   animation-duration: 3s;
 }
+.slidetext {
+  animation-name: slidein;
+  animation-duration: 5s;
+}
 
 
   @keyframes slidein {
@@ -71,39 +75,45 @@
 
 
   .pops2{
-    height: 20%;
+    width: 15vh;
+
 
     animation-name: falling;
     animation-duration: 6s;
 
   }
   .pops3{
-    height: 20%;
+    width: 15vh;
+
     animation-name: falling;
     animation-duration: 5s;
 
   }
 
   .pops4{
-    height: 20%;
+    width: 15vh;
+
     animation-name: falling;
     animation-duration: 4s;
 
   }
   .pops5{
-    height: 20%;
+    width: 15vh;
+
     animation-name: falling;
     animation-duration: 3s;
 
   }
   .pops6{
-    height: 20%;
+    width: 15vh;
+
     animation-name: falling;
     animation-duration: 2s;
 
   }
   .pops7{
-    height: 20%;
+    width: 15vh;
+
     animation-name: falling;
     animation-duration: 1s;
 
@@ -112,14 +122,14 @@
 
 @keyframes falling {
   from {
-   height: 20%;
+  width: 15vh
 
 
 
 
   }
   to {
-    height: 20%;
+    width: 15vh;
 
     transform: translate(0%, 800%);
 
@@ -182,7 +192,7 @@
 
 .copyright {
   font-size: 20px;
-  font-family: helvetica;
+  font-family: 'Satisfy';
   background-color: #d6387f;
   color: white;
   text-align: center;
@@ -230,19 +240,19 @@
   </div>
 </nav>
 <div>
-<img class = "shakeimage" src = "pinkcake.png" style = "padding: 5%;height: 70vh; display: block; margin-right: auto; margin-left: auto; ">
-<label style = "margin-top: -10%; margin-left: 25%; padding: 5%; font-size: 300%;text-align: center; font-family: 'Satisfy';  border-style: solid; color:#e663a6; border-color: #e663a6;"> Eggless Bakes For Every Ocassion! &#9829</label>
+<img class = "shakeimage" src = "pinkcake.png" style = "padding: 5%;height: 60vh; display: block; margin-right: auto; margin-left: auto; ">
+<label style = "margin-top: -10%; margin-left: 25%; padding: 5%; font-size: 300%;text-align: center; font-family: 'Satisfy';  border-style: solid; color:#e663a6; border-color: white;"> Eggless Bakes For Every Ocassion! &#9829</label>
 </div>
 
-<div>
+<div style = "background-color: #f081cf">
 <img class= "shakeimage" src = "prettycake.png" style = "padding: 5%;height:  70vh; display: block; margin-right: auto; margin-left: auto;">
-<label style = "margin-top: -20%; margin-left: 10%; padding: 2%; font-size: 150%;text-align: center; font-family: 'Satisfy'; color: #e663a6; border-style: solid; color: white; background-color: #e663a6;"> &#9733 Located in the Liverpool, UK Area  </label>
+<label class= "slidetext" style = "margin-top: -20%; margin-left: 10%; padding: 2%; font-size: 150%;text-align: center; font-family: 'Satisfy'; color: #e663a6; border-style: solid; color: white; background-color: #e663a6;"> &#9733 Located in the Liverpool, UK Area  </label>
 </div>
 
 
 
 
-<div>  <label style = " margin-left: 5%; margin-top: 5%; padding: 5%; color: #e663a6; border-style: solid; border-color: #e663a6; text-align: center;  font-family: 'Satisfy', cursive; font-size: 200%; "> Curious? Learn about Sushma's Journey! </label> </div>
+<div>  <label class = "slidetext" style = " margin-left: 5%; margin-top: 5%; padding: 5%; color: #e663a6; border-style: solid; color: white; background-color: #e663a6; text-align: center;  font-family: 'Satisfy', cursive; font-size: 200%; "> Curious? Learn about Sushma's Journey! </label> </div>
 
     <div>   <input class ="buttonchange" type="button"  onclick="location.href='about.html';" value="Go to About!" style = "color: white; background-color: pink;font-size: 300%;font-family: 'Satisfy';  padding: 2%; margin-left: 50%;  margin-bottom: 5%; " /> </div>
 
@@ -252,6 +262,6 @@
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<div class ="copyright"> <a> Copyright &copy Sushma's Eggless Bakes 2020 <a> </div>
+<div class ="copyright"> <a> Copyright &copy Sushma's Bakery 2020 <a> </div>
     </body>
     </html>
