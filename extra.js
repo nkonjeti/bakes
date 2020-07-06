@@ -32,7 +32,7 @@ db.doc()
   .set({
  name: userNameInput,
  email: userEmailInput,
- messege: userMessageInput
+ message: userMessageInput
 })
 .then(function() {
  console.log("Data Saved");
